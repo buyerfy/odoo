@@ -1,13 +1,586 @@
 <!DOCTYPE html>
 <html lang="hr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>PrizeIQ.chat — AI nagradne igre</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>PrizeIQ.chat — Preview</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="/src/style.css">
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="nav">
+  <a class="nav-logo" href="#">PrizeIQ<span>.</span>chat</a>
+  <ul class="nav-links">
+    <li><a href="#problem">Zašto PrizeIQ</a></li>
+    <li><a href="#flow">Kako funkcionira</a></li>
+    <li><a href="#ai-logic">AI tehnologija</a></li>
+    <li><a href="#analytics">Analytics</a></li>
+    <li><a href="#pricing">Cijene</a></li>
+  </ul>
+  <a class="btn btn-green" href="#pricing" style="padding:11px 22px;font-size:.8rem;">Zatraži Demo</a>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="container">
+    <div class="hero-grid">
+      <div class="reveal">
+        <div class="hero-badge">
+          <div class="hero-badge-dot">✦</div>
+          <span style="color:rgba(240,240,248,.55)">Nova generacija nagradnih igara</span>
+        </div>
+        <h1 class="hero-headline">
+          AI koji <span class="hl-green">povećava prijave</span><br>
+          i validira račune<br>
+          <span class="hl-purple">u realnom vremenu</span>
+        </h1>
+        <p class="hero-sub">Zamijenite skupi SMS marketing s inteligentnim WhatsApp &amp; Viber AI agentom. Automatska OCR validacija, instant potvrde i 24/7 podrška — bez troškova unaprijed. <strong>RNG - Random Number Generator certificirano izvlačenje dobitnika.</strong></p>
+        <div class="hero-cta-row">
+          <a class="btn btn-green" href="#pricing">
+            Zatraži Demo
+            <svg width="14" height="10" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M1 5h12M8 1l4 4-4 4"/></svg>
+          </a>
+          <a class="btn btn-outline" href="#flow">Kako funkcionira →</a>
+        </div>
+        <div class="hero-trust">
+          <span><span class="chk">✓</span> Nema troškova unaprijed</span>
+          <span><span class="chk">✓</span> GDPR sukladno</span>
+          <span><span class="chk">✓</span> Aktivno za 48h</span>
+        </div>
+      </div>
+      <div class="hero-right reveal">
+        <div class="glow-ring glow-ring-1"></div>
+        <div class="glow-ring glow-ring-2"></div>
+        <div class="glow-ring glow-ring-3"></div>
+        <div class="stat-chip chip-1"><span class="val">+68%</span>Više prijava vs SMS</div>
+        <div class="stat-chip chip-2"><span class="val">97%</span>OCR točnost AI</div>
+        <!-- 3D Phone mockup -->
+        <div class="phone-3d-wrap">
+          <div class="phone-shell">
+            <div class="phone-notch"><div class="phone-cam"></div></div>
+            <div class="phone-screen">
+              <!-- WA Status bar -->
+              <div class="wa-status-bar">
+                <span id="wa-clock">9:41</span>
+                <div class="wa-status-icons">
+                  <svg width="12" height="9" viewBox="0 0 12 9" fill="rgba(255,255,255,.75)"><rect x="0" y="5" width="2" height="4" rx="0.5"/><rect x="3" y="3" width="2" height="6" rx="0.5"/><rect x="6" y="1" width="2" height="8" rx="0.5"/><rect x="9" y="0" width="2" height="9" rx="0.5"/></svg>
+                  <svg width="10" height="9" viewBox="0 0 10 9" fill="rgba(255,255,255,.75)"><path d="M5 1.5C6.8 1.5 8.4 2.3 9.5 3.6L10 3 8.5 1.5C7.2.6 5.7 0 4.9 0 4.2 0 2.7.6 1.4 1.5L0 3l.5.6C1.6 2.3 3.2 1.5 5 1.5z"/><path d="M5 3.5c1.2 0 2.3.5 3.1 1.3L9 4l-.5-.5A5 5 0 005 2a5 5 0 00-3.5 1.5L1 4l.9.8A4 4 0 015 3.5z"/><path d="M5 5.5c.7 0 1.3.3 1.8.7L8 5.5 7.5 5A3.5 3.5 0 005 4a3.5 3.5 0 00-2.5 1L2 5.5l1.2.7A2.5 2.5 0 015 5.5z"/><circle cx="5" cy="7.5" r="1.5"/></svg>
+                  <svg width="20" height="9" viewBox="0 0 20 9" fill="none"><rect x="0.5" y="0.5" width="17" height="8" rx="2" stroke="rgba(255,255,255,.5)" stroke-width=".8"/><rect x="18" y="2.5" width="1.5" height="4" rx=".75" fill="rgba(255,255,255,.4)"/><rect x="1.5" y="1.5" width="12" height="6" rx="1.2" fill="rgba(255,255,255,.75)"/></svg>
+                </div>
+              </div>
+              <!-- WA Header -->
+              <div class="wa-head">
+                <span class="wa-back">‹</span>
+                <div class="wa-ava">P</div>
+                <div class="wa-info">
+                  <div class="wa-name">PrizeIQ Bot</div>
+                  <div class="wa-stat"><span class="wa-online-dot"></span>online</div>
+                </div>
+                <div class="wa-head-icons">
+                  <span>📹</span>
+                  <span>📞</span>
+                  <span>⋮</span>
+                </div>
+              </div>
+              <!-- Messages -->
+              <div class="wa-body" id="hero-chat" style="min-height:330px;max-height:330px">
+                <div class="wa-date-chip">Danas</div>
+              </div>
+              <!-- Input bar -->
+              <div class="wa-input-bar">
+                <span style="color:#8696a0;font-size:.9rem">😊</span>
+                <div class="wa-input-field">Poruka</div>
+                <div class="wa-input-icons">
+                  <span>📎</span>
+                  <span>📷</span>
+                </div>
+                <div class="wa-send-btn">▶</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<div class="marquee-wrap" aria-hidden="true">
+  <div class="marquee-track" id="mtrack">
+    <span>Premium Quality</span><span>Award Winning Design</span><span>Trusted Worldwide</span><span>Built for Performance</span><span>Innovative Solutions</span>
+    <span>Premium Quality</span><span>Award Winning Design</span><span>Trusted Worldwide</span><span>Built for Performance</span><span>Innovative Solutions</span>
+  </div>
+</div>
+
+<div class="glow-divider"></div>
+
+<!-- PROBLEM / SOLUTION -->
+<section id="problem">
+  <div class="container">
+    <div class="reveal" style="text-align:center;margin-bottom:48px">
+      <span class="label label-purple"><span class="label-dot"></span>Zašto PrizeIQ</span>
+      <h2 class="section-title">Stara metoda vs.<br><span class="hl-green">nova realnost</span></h2>
+    </div>
+    <div class="ps-grid reveal">
+      <div class="ps-card ps-before">
+        <div class="ps-tag">✕ Stara metoda · SMS i Web forme</div>
+        <div class="ps-title">Visoki odustanak,<br>ručni rad, nema feedbacka</div>
+        <ul class="ps-list">
+          <li><div class="ps-icon">✕</div><span>SMS ima ograničen karakter — nema dijaloga ni personalizacije</span></li>
+          <li><div class="ps-icon">✕</div><span>Web forme: 60–80% napuštenosti na mobitelu</span></li>
+          <li><div class="ps-icon">✕</div><span>Ručna validacija računa — skupa i spora</span></li>
+          <li><div class="ps-icon">✕</div><span>Nema automatske provjere duplikata i prijevara</span></li>
+          <li><div class="ps-icon">✕</div><span>Visoki fiksni troškovi neovisno o broju prijava</span></li>
+          <li><div class="ps-icon">✕</div><span>Nula uvida u realnom vremenu — samo CSV na kraju</span></li>
+        </ul>
+      </div>
+      <div class="ps-card ps-after">
+        <div class="ps-tag">✓ PrizeIQ AI · WhatsApp &amp; Viber</div>
+        <div class="ps-title">Instant potvrda,<br>OCR validacija, 24/7</div>
+        <ul class="ps-list">
+          <li><div class="ps-icon">✓</div><span>WhatsApp/Viber — kanal koji korisnici već koriste i vole</span></li>
+          <li><div class="ps-icon">✓</div><span>Konverzija 3× veća — jednostavan chat flow umjesto forme</span></li>
+          <li><div class="ps-icon">✓</div><span>AI OCR validira račun u &lt;3 sekunde, automatski</span></li>
+          <li><div class="ps-icon">✓</div><span>Detekcija prijevara i duplikata u realnom vremenu</span></li>
+          <li><div class="ps-icon">✓</div><span>Pay-per-package — plaćate samo ono što koristite</span></li>
+          <li><div class="ps-icon">✓</div><span>Live dashboard: svaka prijava vidljiva odmah</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="ps-img reveal">
+      <svg viewBox="0 0 900 180" xmlns="http://www.w3.org/2000/svg" style="width:100%;display:block;background:#08080f;border-radius:16px;padding:0">
+        <!-- Left side: SMS -->
+        <rect x="0" y="0" width="450" height="180" fill="rgba(255,40,40,0.04)"/>
+        <!-- Right side: PrizeIQ -->
+        <rect x="450" y="0" width="450" height="180" fill="rgba(37,211,102,0.05)"/>
+        <!-- Divider -->
+        <line x1="450" y1="20" x2="450" y2="160" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+        <!-- SMS label -->
+        <rect x="30" y="28" width="140" height="24" rx="12" fill="rgba(255,80,80,0.15)"/>
+        <text x="100" y="44" text-anchor="middle" font-family="Montserrat,sans-serif" font-size="10" font-weight="700" fill="rgba(255,100,100,0.85)">✕ SMS / Web forme</text>
+        <!-- PrizeIQ label -->
+        <rect x="480" y="28" width="160" height="24" rx="12" fill="rgba(37,211,102,0.15)"/>
+        <text x="560" y="44" text-anchor="middle" font-family="Montserrat,sans-serif" font-size="10" font-weight="700" fill="#25D366">✓ PrizeIQ AI · WhatsApp</text>
+        <!-- SMS stats -->
+        <text x="50" y="90" font-family="Montserrat,sans-serif" font-size="28" font-weight="900" fill="rgba(255,100,100,0.7)">60–80%</text>
+        <text x="50" y="108" font-family="DM Sans,sans-serif" font-size="11" fill="rgba(240,240,248,0.4)">odustanak na web formama</text>
+        <text x="50" y="135" font-family="Montserrat,sans-serif" font-size="22" font-weight="900" fill="rgba(255,100,100,0.5)">2–5 dana</text>
+        <text x="50" y="153" font-family="DM Sans,sans-serif" font-size="11" fill="rgba(240,240,248,0.35)">ručna obrada i validacija</text>
+        <!-- PrizeIQ stats -->
+        <text x="480" y="90" font-family="Montserrat,sans-serif" font-size="28" font-weight="900" fill="#25D366">97%</text>
+        <text x="480" y="108" font-family="DM Sans,sans-serif" font-size="11" fill="rgba(240,240,248,0.55)">konverzija AI chat kanala</text>
+        <text x="480" y="135" font-family="Montserrat,sans-serif" font-size="22" font-weight="900" fill="#25D366">&lt;3 sek</text>
+        <text x="480" y="153" font-family="DM Sans,sans-serif" font-size="11" fill="rgba(240,240,248,0.45)">automatska OCR validacija</text>
+        <!-- VS badge -->
+        <circle cx="450" cy="90" r="22" fill="#0d0a1f" stroke="rgba(115,96,242,0.4)" stroke-width="1.5"/>
+        <text x="450" y="95" text-anchor="middle" font-family="Montserrat,sans-serif" font-size="12" font-weight="900" fill="#7360F2">VS</text>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<div class="glow-divider"></div>
+
+<!-- 3-STEP FLOW -->
+<section id="flow">
+  <div class="container">
+    <div class="reveal" style="text-align:center;margin-bottom:52px">
+      <span class="label label-green"><span class="label-dot"></span>Kako funkcionira</span>
+      <h2 class="section-title">Tri koraka do<br><span class="hl-purple">nagrađenog kupca</span></h2>
+      <p class="section-sub" style="margin:10px auto 0;text-align:center">Jednostavan tijek koji korisnik može dovršiti za manje od 60 sekundi.</p>
+    </div>
+    <div class="step-grid">
+      <div class="step-connector"></div>
+      <div class="step-card glass reveal">
+        <div class="step-num step-num-1">1</div>
+        <div class="step-icon">📸</div>
+        <h3 class="step-title">Fotkaj</h3>
+        <p class="step-desc">Kupac fotografira račun kamerom mobitela. AI OCR motor trenutno prepoznaje SKU, iznos i datum kupovine — bez tipkanja.</p>
+      </div>
+      <div class="step-card glass reveal" style="animation-delay:.12s">
+        <div class="step-num step-num-2">2</div>
+        <div class="step-icon">📤</div>
+        <h3 class="step-title">Pošalji</h3>
+        <p class="step-desc">Slika se šalje kroz WhatsApp ili Viber. PrizeIQ AI prima, analizira i validira u manje od 3 sekunde. Nema forme, nema čekanja.</p>
+      </div>
+      <div class="step-card glass reveal" style="animation-delay:.24s">
+        <div class="step-num step-num-3">3</div>
+        <div class="step-icon">🏆</div>
+        <h3 class="step-title">Osvoji</h3>
+        <p class="step-desc">Kupac odmah dobiva potvrdu i bod za izvlačenje. Vi dobivate validiranu prijavu spremu za legal i live u dashboardu.</p>
+      </div>
+    </div>
+    <div class="flow-bottom reveal">
+      <!-- Live chat mockup -->
+      <div class="chat-wrap" style="border-radius:16px;overflow:hidden;border:1px solid rgba(37,211,102,.2)">
+        <div style="display:flex;align-items:center;gap:6px;padding:7px 14px;background:rgba(37,211,102,.06);border-bottom:1px solid rgba(37,211,102,.15)">
+          <div class="chat-label-dot"></div>
+          <span style="font-size:.62rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--green)">Primjer AI razgovora · Uživo</span>
+        </div>
+        <div class="wa-head">
+          <span class="wa-back">‹</span>
+          <div class="wa-ava">P</div>
+          <div class="wa-info">
+            <div class="wa-name">PrizeIQ Bot</div>
+            <div class="wa-stat"><span class="wa-online-dot"></span>online</div>
+          </div>
+          <div class="wa-head-icons"><span>📞</span><span>⋮</span></div>
+        </div>
+        <div class="wa-body" id="wa-body" style="min-height:260px;max-height:260px">
+          <div class="wa-date-chip">Danas</div>
+        </div>
+        <div class="wa-input-bar">
+          <span style="color:#8696a0;font-size:.85rem">😊</span>
+          <div class="wa-input-field">Poruka</div>
+          <div class="wa-input-icons"><span>📎</span></div>
+          <div class="wa-send-btn" style="width:32px;height:32px;font-size:.7rem">▶</div>
+        </div>
+      </div>
+      <div class="flow-img" style="background:#08080f;border-radius:16px;border:1px solid var(--border);padding:24px 20px;display:flex;flex-direction:column;justify-content:center;min-height:340px">
+        <!-- AI OCR processing panel -->
+        <div style="font-size:.6rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--text-dim);margin-bottom:16px">🤖 AI OCR Engine · Live obrada</div>
+
+        <!-- Receipt scan mockup -->
+        <div style="background:rgba(255,255,255,.03);border:1px solid var(--border);border-radius:10px;padding:14px;margin-bottom:14px;position:relative;overflow:hidden">
+          <!-- scan line animation -->
+          <div id="scan-line" style="position:absolute;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,#25D366,transparent);top:20%;animation:scanMove 2.2s ease-in-out infinite;pointer-events:none"></div>
+          <div style="font-size:.62rem;color:var(--text-dim);margin-bottom:8px;font-family:'Montserrat',sans-serif;font-weight:700">📄 racun_kaufland.jpg</div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:6px">
+            <div style="background:rgba(37,211,102,.07);border:1px solid rgba(37,211,102,.15);border-radius:6px;padding:8px">
+              <div style="font-size:.55rem;color:var(--text-dim);margin-bottom:3px">TRGOVINA</div>
+              <div style="font-size:.75rem;font-weight:700;color:var(--text)">Kaufland HR</div>
+            </div>
+            <div style="background:rgba(37,211,102,.07);border:1px solid rgba(37,211,102,.15);border-radius:6px;padding:8px">
+              <div style="font-size:.55rem;color:var(--text-dim);margin-bottom:3px">IZNOS</div>
+              <div style="font-size:.75rem;font-weight:700;color:#25D366">4,99 EUR</div>
+            </div>
+            <div style="background:rgba(37,211,102,.07);border:1px solid rgba(37,211,102,.15);border-radius:6px;padding:8px">
+              <div style="font-size:.55rem;color:var(--text-dim);margin-bottom:3px">DATUM</div>
+              <div style="font-size:.75rem;font-weight:700;color:var(--text)">17.03.2026.</div>
+            </div>
+            <div style="background:rgba(37,211,102,.07);border:1px solid rgba(37,211,102,.15);border-radius:6px;padding:8px">
+              <div style="font-size:.55rem;color:var(--text-dim);margin-bottom:3px">JIR KÔD</div>
+              <div style="font-size:.65rem;font-weight:700;color:var(--text);word-break:break-all">a02570c4…</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Check results -->
+        <div style="display:flex;flex-direction:column;gap:7px">
+          <div style="display:flex;align-items:center;justify-content:space-between;font-size:.7rem">
+            <span style="color:var(--text-muted)">✓ OCR ekstrakcija teksta</span>
+            <span style="color:#25D366;font-weight:700;font-size:.65rem">97ms</span>
+          </div>
+          <div style="display:flex;align-items:center;justify-content:space-between;font-size:.7rem">
+            <span style="color:var(--text-muted)">✓ Validacija JIR-a</span>
+            <span style="color:#25D366;font-weight:700;font-size:.65rem">204ms</span>
+          </div>
+          <div style="display:flex;align-items:center;justify-content:space-between;font-size:.7rem">
+            <span style="color:var(--text-muted)">✓ Provjera duplikata</span>
+            <span style="color:#25D366;font-weight:700;font-size:.65rem">311ms</span>
+          </div>
+          <div style="display:flex;align-items:center;justify-content:space-between;font-size:.7rem;padding-top:6px;border-top:1px solid var(--border)">
+            <span style="color:#25D366;font-weight:700">🎉 Račun odobren</span>
+            <span style="background:rgba(37,211,102,.12);color:#25D366;font-weight:700;font-size:.6rem;padding:3px 8px;border-radius:100px;border:1px solid rgba(37,211,102,.25)">&lt; 3 sek ukupno</span>
+          </div>
+        </div>
+
+        
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="glow-divider"></div>
+
+<!-- AI LOGIC -->
+<section id="ai-logic">
+  <div class="container">
+    <div class="ai-grid">
+      <div>
+        <span class="label label-purple reveal"><span class="label-dot"></span>AI arhitektura</span>
+        <h2 class="section-title reveal">Control Layer &amp;<br><span class="hl-purple">AI logika</span></h2>
+        <p class="section-sub reveal" style="margin-bottom:32px">Iza jednostavnog chata stoji moćan engine koji štiti integritet vaše kampanje i automatski rješava sve kompleksne slučajeve.</p>
+        <div class="ai-features">
+          <div class="ai-feat reveal">
+            <div class="ai-feat-icon ai-feat-icon-p">⚙️</div>
+            <div><div class="ai-feat-title">Rule Engine</div><div class="ai-feat-desc">Konfigurirajte pravila: koji SKU-ovi kvalificiraju, minimalni iznos, vremenski prozor, max prijava po OIBu.</div></div>
+          </div>
+          <div class="ai-feat reveal" style="animation-delay:.1s">
+            <div class="ai-feat-icon ai-feat-icon-p">🛡️</div>
+            <div><div class="ai-feat-title">Fraud Detection</div><div class="ai-feat-desc">AI prepoznaje duplicirane račune i izmijenjene fotografije. Automatski blokira sumnjive unose.</div></div>
+          </div>
+          <div class="ai-feat reveal" style="animation-delay:.2s">
+            <div class="ai-feat-icon ai-feat-icon-g">📋</div>
+            <div><div class="ai-feat-title">Audit Layer</div><div class="ai-feat-desc">Svaka akcija logirana s timestampom i AI razlogom odluke. Export spreman za notara.</div></div>
+          </div>
+          <div class="ai-feat reveal" style="animation-delay:.3s">
+            <div class="ai-feat-icon ai-feat-icon-g">👁️</div>
+            <div><div class="ai-feat-title">OCR &amp; Vision AI</div><div class="ai-feat-desc">Čita fiskalne račune svih hrvatskih formata. Točnost &gt;97% i raste s upotrebom.</div></div>
+          </div>
+        </div>
+      </div>
+      <div class="ai-right reveal">
+        <div class="ai-img" style="padding:24px;background:#08080f">
+          <svg viewBox="0 0 520 300" xmlns="http://www.w3.org/2000/svg" style="width:100%;display:block">
+            <defs>
+              <linearGradient id="aig1" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" stop-color="#7360F2"/>
+                <stop offset="100%" stop-color="#25D366"/>
+              </linearGradient>
+              <filter id="glow"><feGaussianBlur stdDeviation="3" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+            </defs>
+
+            <!-- Central AI Engine -->
+            <rect x="175" y="110" width="170" height="80" rx="12" fill="rgba(115,96,242,0.12)" stroke="rgba(115,96,242,0.5)" stroke-width="1.5"/>
+            <text x="260" y="143" text-anchor="middle" font-family="Montserrat,sans-serif" font-size="11" font-weight="900" fill="#a89bff">🧠 PrizeIQ</text>
+            <text x="260" y="159" text-anchor="middle" font-family="Montserrat,sans-serif" font-size="9" font-weight="700" fill="rgba(168,155,255,.7)">AI Control Layer</text>
+            <text x="260" y="177" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="8" fill="rgba(240,240,248,.4)">OCR · Validacija · Fraud detect</text>
+
+            <!-- Input: WhatsApp -->
+            <rect x="20" y="55" width="110" height="50" rx="8" fill="rgba(37,211,102,0.08)" stroke="rgba(37,211,102,0.3)" stroke-width="1"/>
+            <text x="75" y="76" text-anchor="middle" font-size="14">💬</text>
+            <text x="75" y="92" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="8.5" font-weight="700" fill="#e9edef">WhatsApp</text>
+            <text x="75" y="103" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="7.5" fill="rgba(240,240,248,.45)">Slika računa</text>
+
+            <!-- Input: Viber -->
+            <rect x="20" y="195" width="110" height="50" rx="8" fill="rgba(115,96,242,0.08)" stroke="rgba(115,96,242,0.3)" stroke-width="1"/>
+            <text x="75" y="216" text-anchor="middle" font-size="14">📲</text>
+            <text x="75" y="232" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="8.5" font-weight="700" fill="#e9edef">Viber</text>
+            <text x="75" y="243" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="7.5" fill="rgba(240,240,248,.45)">Slika računa</text>
+
+            <!-- Output: Dashboard -->
+            <rect x="390" y="55" width="110" height="50" rx="8" fill="rgba(37,211,102,0.08)" stroke="rgba(37,211,102,0.3)" stroke-width="1"/>
+            <text x="445" y="76" text-anchor="middle" font-size="14">📊</text>
+            <text x="445" y="92" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="8.5" font-weight="700" fill="#e9edef">Dashboard</text>
+            <text x="445" y="103" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="7.5" fill="rgba(240,240,248,.45)">Live prijave</text>
+
+            <!-- Output: Potvrda -->
+            <rect x="390" y="195" width="110" height="50" rx="8" fill="rgba(37,211,102,0.08)" stroke="rgba(37,211,102,0.3)" stroke-width="1"/>
+            <text x="445" y="216" text-anchor="middle" font-size="14">✅</text>
+            <text x="445" y="232" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="8.5" font-weight="700" fill="#e9edef">Instant potvrda</text>
+            <text x="445" y="243" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="7.5" fill="rgba(240,240,248,.45)">Korisniku</text>
+
+            <!-- Arrows IN -->
+            <line x1="130" y1="80" x2="175" y2="135" stroke="rgba(37,211,102,0.4)" stroke-width="1.5" stroke-dasharray="4 3"/>
+            <polygon points="173,128 178,140 166,137" fill="rgba(37,211,102,0.5)"/>
+            <line x1="130" y1="220" x2="175" y2="165" stroke="rgba(115,96,242,0.4)" stroke-width="1.5" stroke-dasharray="4 3"/>
+            <polygon points="173,172 178,160 166,163" fill="rgba(115,96,242,0.5)"/>
+
+            <!-- Arrows OUT -->
+            <line x1="345" y1="135" x2="390" y2="80" stroke="rgba(37,211,102,0.4)" stroke-width="1.5" stroke-dasharray="4 3"/>
+            <polygon points="387,87 392,75 380,78" fill="rgba(37,211,102,0.5)"/>
+            <line x1="345" y1="165" x2="390" y2="220" stroke="rgba(37,211,102,0.4)" stroke-width="1.5" stroke-dasharray="4 3"/>
+            <polygon points="387,213 392,225 380,222" fill="rgba(37,211,102,0.5)"/>
+
+            <!-- Bottom modules -->
+            <rect x="60" y="268" width="90" height="22" rx="6" fill="rgba(37,211,102,0.07)" stroke="rgba(37,211,102,0.2)" stroke-width="1"/>
+            <text x="105" y="283" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="7.5" font-weight="700" fill="rgba(37,211,102,.7)">🔍 OCR Engine</text>
+
+            <rect x="215" y="268" width="90" height="22" rx="6" fill="rgba(115,96,242,0.07)" stroke="rgba(115,96,242,0.2)" stroke-width="1"/>
+            <text x="260" y="283" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="7.5" font-weight="700" fill="rgba(168,155,255,.7)">🛡️ Fraud Detect</text>
+
+            <rect x="370" y="268" width="90" height="22" rx="6" fill="rgba(37,211,102,0.07)" stroke="rgba(37,211,102,0.2)" stroke-width="1"/>
+            <text x="415" y="283" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="7.5" font-weight="700" fill="rgba(37,211,102,.7)">📋 JIR Validacija</text>
+
+            <!-- Connecting lines to modules -->
+            <line x1="220" y1="190" x2="105" y2="268" stroke="rgba(255,255,255,.06)" stroke-width="1"/>
+            <line x1="260" y1="190" x2="260" y2="268" stroke="rgba(255,255,255,.06)" stroke-width="1"/>
+            <line x1="300" y1="190" x2="415" y2="268" stroke="rgba(255,255,255,.06)" stroke-width="1"/>
+
+            <!-- Glow on central node -->
+            <rect x="175" y="110" width="170" height="80" rx="12" fill="none" stroke="url(#aig1)" stroke-width="1" opacity=".4" filter="url(#glow)"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="glow-divider"></div>
+
+<!-- ANALYTICS -->
+<section id="analytics">
+  <div class="container">
+    <div class="reveal" style="text-align:center;margin-bottom:48px">
+      <span class="label label-green"><span class="label-dot"></span>Live Analytics</span>
+      <h2 class="section-title">Dashboard koji<br><span class="hl-green">ne spava</span></h2>
+      <p class="section-sub" style="text-align:center;margin:10px auto 0">Pratite svaku prijavu u realnom vremenu. Heatmapa po regijama, live counteri i AI izvještaji.</p>
+    </div>
+    <div class="counters-grid reveal">
+      <div class="counter-card glass"><div class="counter-val counter-green" id="c1">0</div><div class="counter-label">Validnih prijava</div></div>
+      <div class="counter-card glass"><div class="counter-val counter-white" id="c2">0</div><div class="counter-label">Ukupno sudionika</div></div>
+      <div class="counter-card glass"><div class="counter-val counter-purple" id="c3">0</div><div class="counter-label">AI efikasnost</div></div>
+    </div>
+    <!-- Dashboard -->
+    <div class="dash-wrap reveal">
+      <div class="dash-topbar">
+        <div class="dash-dot" style="background:#ff5f57"></div>
+        <div class="dash-dot" style="background:#febc2e"></div>
+        <div class="dash-dot" style="background:#28c840"></div>
+        <span style="font-size:.72rem;font-weight:600;color:var(--text-dim);margin-left:8px">PrizeIQ Analytics · Kampanja: Ljeto 2025</span>
+        <div class="dash-live"><div class="dash-live-dot"></div>LIVE</div>
+      </div>
+      <div class="dash-body">
+        <div class="dash-main">
+
+        <div class="dash-sidebar">
+          <div class="metric-sm"><div class="metric-sm-label">Validnih prijava</div><div class="metric-sm-val" style="color:var(--green)">2,847</div><div class="metric-sm-trend" style="color:var(--green)">↑ +12% danas</div></div>
+          <div class="metric-sm"><div class="metric-sm-label">Sudionika ukupno</div><div class="metric-sm-val">4,120</div><div class="metric-sm-trend" style="color:var(--green)">↑ +8% tjedan</div></div>
+          <div class="metric-sm"><div class="metric-sm-label">AI efikasnost</div><div class="metric-sm-val" style="color:var(--purple)">97%</div><div class="metric-sm-trend" style="color:var(--purple)">↑ vs 71% ručno</div></div>
+          <div class="log-wrap">
+            <div class="log-title">Live aktivnost</div>
+            <div id="live-log">
+              <div class="log-item"><div class="log-dot" style="background:var(--green)"></div><div class="log-text">Račun validiran · Zagreb</div><div class="log-time">2s</div></div>
+              <div class="log-item"><div class="log-dot" style="background:var(--purple)"></div><div class="log-text">Nova prijava · Split</div><div class="log-time">8s</div></div>
+              <div class="log-item"><div class="log-dot" style="background:var(--green)"></div><div class="log-text">Duplikat blokiran · AI</div><div class="log-time">15s</div></div>
+              <div class="log-item"><div class="log-dot" style="background:var(--green)"></div><div class="log-text">Račun validiran · Rijeka</div><div class="log-time">22s</div></div>
+              <div class="log-item"><div class="log-dot" style="background:var(--purple)"></div><div class="log-text">Nova prijava · Osijek</div><div class="log-time">31s</div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Regional + peak bars -->
+    <div class="bars-grid reveal">
+      <div class="bar-card glass">
+        <h3>📍 Regionalna distribucija</h3>
+        <div class="bar-row"><span class="bar-label">Zagreb</span><div class="bar-track"><div class="bar-fill bar-fill-g" style="width:68%"></div></div><span class="bar-pct">68%</span></div>
+        <div class="bar-row"><span class="bar-label">Split</span><div class="bar-track"><div class="bar-fill bar-fill-g" style="width:45%"></div></div><span class="bar-pct">45%</span></div>
+        <div class="bar-row"><span class="bar-label">Rijeka</span><div class="bar-track"><div class="bar-fill bar-fill-g" style="width:32%"></div></div><span class="bar-pct">32%</span></div>
+        <div class="bar-row"><span class="bar-label">Osijek</span><div class="bar-track"><div class="bar-fill bar-fill-p" style="width:24%"></div></div><span class="bar-pct">24%</span></div>
+      </div>
+      <div class="bar-card glass">
+        <h3>🕐 Vršni sati aktivnosti</h3>
+        <div class="bar-row"><span class="bar-label">18:00–20:00</span><div class="bar-track"><div class="bar-fill bar-fill-p" style="width:82%"></div></div><span class="bar-pct">82%</span></div>
+        <div class="bar-row"><span class="bar-label">12:00–14:00</span><div class="bar-track"><div class="bar-fill bar-fill-p" style="width:61%"></div></div><span class="bar-pct">61%</span></div>
+        <div class="bar-row"><span class="bar-label">20:00–22:00</span><div class="bar-track"><div class="bar-fill bar-fill-p" style="width:54%"></div></div><span class="bar-pct">54%</span></div>
+        <div class="bar-row"><span class="bar-label">08:00–10:00</span><div class="bar-track"><div class="bar-fill bar-fill-p" style="width:38%"></div></div><span class="bar-pct">38%</span></div>
+      </div>
+    </div>
+    <div class="analytics-img reveal">
+      <img src="/phone-mockup.png" alt="Analytics dashboard" style="width:100%;display:block"/>
+    </div>
+  </div>
+</section>
+
+<div class="glow-divider"></div>
+
+<!-- PRICING -->
+<section id="pricing">
+  <div class="container">
+    <div class="reveal" style="text-align:center;margin-bottom:48px">
+      <span class="label label-green"><span class="label-dot"></span>Cijene</span>
+      <h2 class="section-title">Pay-per-Package.<br><span class="hl-green">Bez iznenađenja.</span></h2>
+      <p class="section-sub" style="text-align:center;margin:10px auto 0">Zamijenite fiksni SMS trošak s modelom koji raste samo kad i vaša kampanja.</p>
+    </div>
+    <div class="pricing-center">
+      <div class="pricing-card reveal">
+        <div class="pricing-border"></div>
+        <div class="pricing-badge">✦ Drop-in SMS zamjena</div>
+        <div class="pricing-title">Package Model</div>
+        <p class="pricing-desc">Idealno za brand menadžere i agencije koje vode nagrade igre i žele predvidiv, skalabilan trošak.</p>
+        <div class="pricing-amount">
+          <span class="pricing-cur">€</span>
+          <span class="pricing-big">0</span>
+          <span class="pricing-per">unaprijed · paketi po potrebi</span>
+        </div>
+        <p class="pricing-note">Plaćate samo iskorištene pakete. Nema pretplate, nema minimuma, nema lock-ina.</p>
+        <div class="pricing-divider"></div>
+        <div class="tiers">
+          <div class="tier tier-green"><div class="tier-val">500</div><div class="tier-unit">prijava</div><div class="tier-name">Starter</div></div>
+          <div class="tier tier-popular tier-purple"><div class="tier-badge">Popularno</div><div class="tier-val">2.500</div><div class="tier-unit">prijava</div><div class="tier-name">Growth</div></div>
+          <div class="tier tier-white"><div class="tier-val">10K+</div><div class="tier-unit">prijava</div><div class="tier-name">Enterprise</div></div>
+        </div>
+        <div class="feat-grid">
+          <div class="feat-item"><span class="feat-chk">✓</span>AI OCR validacija računa</div>
+          <div class="feat-item"><span class="feat-chk">✓</span>WhatsApp &amp; Viber bot</div>
+          <div class="feat-item"><span class="feat-chk">✓</span>Live analytics dashboard</div>
+          <div class="feat-item"><span class="feat-chk">✓</span>Fraud detection AI</div>
+          <div class="feat-item"><span class="feat-chk">✓</span>Audit log za regulatora</div>
+          <div class="feat-item"><span class="feat-chk">✓</span>Rule engine konfiguracija</div>
+          <div class="feat-item"><span class="feat-chk">✓</span>Export za notara (PDF)</div>
+          <div class="feat-item"><span class="feat-chk">✓</span>Onboarding &amp; podrška</div>
+        </div>
+        <div class="pricing-cta">
+          <a class="btn btn-green" href="/cdn-cgi/l/email-protection#375f525b5b587747455e4d525e4619545f5643">
+            <svg width="14" height="10" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M1 5h12M8 1l4 4-4 4"/></svg>
+            Zatraži Demo i Cjenik
+          </a>
+          <a class="btn btn-outline" href="/cdn-cgi/l/email-protection#95fdf0f9f9fad5e5e7fceff0fce4bbf6fdf4e1">Razgovarajmo →</a>
+        </div>
+        <div class="pricing-guarantee">🛡️ Bez lock-ina · Bez minimuma · GDPR sukladno · Aktivno za 48h</div>
+      </div>
+      <div class="pricing-img reveal" style="display:flex;align-items:center;justify-content:center;background:#000;border-radius:16px;overflow:hidden;border:1px solid var(--border);margin-top:40px">
+        <img src="/hero-screen.png" alt="WhatsApp mobilni korisnik" style="width:100%;max-width:520px;display:block;margin:0 auto"/>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section id="final-cta">
+  <div class="container">
+    <div class="cta-content reveal">
+      <div class="cta-tag">◆ &nbsp; Bez promjene budžeta &nbsp; ◆</div>
+      <h2 class="cta-title">Zamijenite SMS<br><span class="hl-shine">bez promjene budžeta</span></h2>
+      <p class="cta-sub">Vaši SMS troškovi postaju PrizeIQ paketi — isti budžet, 3× više prijava, 10× bolji podaci. Pokrenite prvu kampanju za manje od 48 sati.</p>
+      <div class="cta-cards">
+        <div class="cta-card"><div class="cta-card-icon">📈</div><div class="cta-card-title">Više prijava</div><div class="cta-card-sub">Do 3× više sudionika</div></div>
+        <div class="cta-card"><div class="cta-card-icon">⚡</div><div class="cta-card-title">Instant validacija</div><div class="cta-card-sub">AI odgovor u sekundama</div></div>
+        <div class="cta-card"><div class="cta-card-icon">✅</div><div class="cta-card-title">Isti budžet</div><div class="cta-card-sub">Pay-per-entry model</div></div>
+      </div>
+      <div class="cta-btns">
+        <a class="btn btn-green" href="/cdn-cgi/l/email-protection#147c7178787b5464667d6e717d653a777c7560" style="padding:16px 40px;font-size:.95rem">
+          <svg width="16" height="12" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M1 6h14M9 1l6 5-6 5"/></svg>
+          Zatraži Demo — Besplatno
+        </a>
+        <a class="btn btn-outline" href="/cdn-cgi/l/email-protection#4c24292020230c3c3e253629253d622f242d38" style="padding:16px 36px;font-size:.95rem;border-color:rgba(255,255,255,.18)">Razgovarajmo →</a>
+      </div>
+      <div class="cta-small">
+        <span>✓ Bez kreditne kartice</span>
+        <span>✓ Aktivno za 48h</span>
+        <span>✓ GDPR &amp; pravna usklađenost</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <a class="footer-logo" href="#">PrizeIQ<span>.</span>chat</a>
+        <p class="footer-desc">AI chatbot koji povećava prijave i validira račune u realnom vremenu na WhatsApp i Viber.</p>
+      </div>
+      <div>
+        <div class="footer-col-title">Platforma</div>
+        <ul class="footer-links">
+          <li><a href="#problem">Zašto PrizeIQ</a></li>
+          <li><a href="#pricing">Cijene</a></li>
+          <li><a href="#final-cta">Zatraži Demo</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Pravno</div>
+        <ul class="footer-links">
+          <li><a href="/privatnost.html">Privatnost</a></li>
+          <li><a href="#">Uvjeti</a></li>
+          <li><a href="#">GDPR</a></li>
+          <li><a href="/cdn-cgi/l/email-protection#523a373e3e3d1222203b28373b237c313a3326">Kontakt</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 PrizeIQ.chat. Sva prava zadržana.</span>
+      <span>Dizajnirano s ♦ pažnjom</span>
+    </div>
+  </div>
+</footer>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
 </html>
